@@ -1,0 +1,80 @@
+{
+  "table_name": "zzvc_version",
+  "table_comment": "版本管理表,定义App 版本、升级地址、强制升级和状态配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "app_type",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "app类型 比如 ios android"
+    },
+    {
+      "field_name": "version",
+      "data_type": "int(8)",
+      "nullable": false,
+      "default": "0",
+      "comment": "内部版本号"
+    },
+    {
+      "field_name": "version_code",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "外部版本号比如1.2.3"
+    },
+    {
+      "field_name": "is_force",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "是否强制更新0不，1强制更新"
+    },
+    {
+      "field_name": "apk_url",
+      "data_type": "varchar(255)",
+      "nullable": false,
+      "default": null,
+      "comment": "apk最新地址"
+    },
+    {
+      "field_name": "upgrade_point",
+      "data_type": "varchar(500)",
+      "nullable": false,
+      "default": null,
+      "comment": "升级提示"
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "状态"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

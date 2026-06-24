@@ -1,0 +1,543 @@
+{
+  "table_name": "zzvc_contract_review",
+  "table_comment": "销售合同审批表,是销售合同审批主表,用于保存合同审批、成本、毛利、附件和钉钉审批状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同编码"
+    },
+    {
+      "field_name": "code_serial_no",
+      "data_type": "int(4)",
+      "nullable": true,
+      "default": null,
+      "comment": "code后四位数字"
+    },
+    {
+      "field_name": "department_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "销售人员部门id"
+    },
+    {
+      "field_name": "department_name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售人员部门 名称"
+    },
+    {
+      "field_name": "saler_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "销售人员id"
+    },
+    {
+      "field_name": "saler_name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "申请人姓名"
+    },
+    {
+      "field_name": "review_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "评审时间"
+    },
+    {
+      "field_name": "is_inside_settlement",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "是否内部结算 0否 1 是"
+    },
+    {
+      "field_name": "master_contract_linked",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "关联主合同 id"
+    },
+    {
+      "field_name": "chance_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "关联销售机会id"
+    },
+    {
+      "field_name": "chance_end_user",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "最终用户"
+    },
+    {
+      "field_name": "contract_title",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同名称"
+    },
+    {
+      "field_name": "contract_type",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同类型"
+    },
+    {
+      "field_name": "company_body",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": null,
+      "comment": "签约主体 0 直真 1空点"
+    },
+    {
+      "field_name": "customer_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户名称"
+    },
+    {
+      "field_name": "customer_type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户类别"
+    },
+    {
+      "field_name": "contract_money",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同金额"
+    },
+    {
+      "field_name": "estimated_gross_profit",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "预估毛利"
+    },
+    {
+      "field_name": "expected_gross_margin",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "预估毛利率"
+    },
+    {
+      "field_name": "tax_rate",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "税率"
+    },
+    {
+      "field_name": "contract_effective_date",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同生效日期"
+    },
+    {
+      "field_name": "contract_file",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同附件"
+    },
+    {
+      "field_name": "has_po",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": "是否有客户PO"
+    },
+    {
+      "field_name": "po_number",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户PO编号"
+    },
+    {
+      "field_name": "po_file",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户PO附件"
+    },
+    {
+      "field_name": "one_time_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "一次性付款"
+    },
+    {
+      "field_name": "future_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "预付款"
+    },
+    {
+      "field_name": "arrival_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "到货款"
+    },
+    {
+      "field_name": "completion_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "完工款"
+    },
+    {
+      "field_name": "receiving_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收款"
+    },
+    {
+      "field_name": "finished_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "完工款"
+    },
+    {
+      "field_name": "receipt_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收款"
+    },
+    {
+      "field_name": "audit_money",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "审计款"
+    },
+    {
+      "field_name": "warranty_payment",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保款"
+    },
+    {
+      "field_name": "performance_bond",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "履约保证金"
+    },
+    {
+      "field_name": "quality_guarantee",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "质量保证金"
+    },
+    {
+      "field_name": "payment_method_remarks",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "付款方式备注"
+    },
+    {
+      "field_name": "contract_requirements_arrival_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同要求到货时间"
+    },
+    {
+      "field_name": "contract_requirement_completion_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同要求完工时间"
+    },
+    {
+      "field_name": "contract_requirements_acceptance_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同要求验收时间"
+    },
+    {
+      "field_name": "warranty_period",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保期限(月)"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "备注"
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "钉钉审批id"
+    },
+    {
+      "field_name": "dd_approvals_start_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "钉钉审批 发起时间"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "approvals_status",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": "1",
+      "comment": "1 待提交 2审批中 3已拒绝 4已撤销 5已通过"
+    },
+    {
+      "field_name": "engineering_construction_costs",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "工程施工成本"
+    },
+    {
+      "field_name": "labor_costs",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "劳务成本"
+    },
+    {
+      "field_name": "hardware_costs",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "硬件成本"
+    },
+    {
+      "field_name": "is_notice",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0未提醒 1已经提醒"
+    },
+    {
+      "field_name": "future_payment_scale",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "arrival_payment_scale",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "receipt_payment_scale",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "warranty_payment_scale",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "device_list_file",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "customer_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "inside_company_body",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "inside_business_department",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_download_local",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "future_payment_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "预付款(首款)付款时间"
+    },
+    {
+      "field_name": "arrival_payment_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "到货款(进度款)付款时间"
+    },
+    {
+      "field_name": "receipt_payment_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收款付款时间"
+    },
+    {
+      "field_name": "warranty_payment_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "设备质保款付款时间"
+    },
+    {
+      "field_name": "performance_bond_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "performance_bond_time"
+    },
+    {
+      "field_name": "one_time_payment_scale",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "one_time_payment_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "一次性付款时间"
+    },
+    {
+      "field_name": "more_rate1",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "more_rate2",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_bespoke_software",
+      "data_type": "tinyint(4)",
+      "nullable": false,
+      "default": "1",
+      "comment": "是否包含软件定制开发：0-是，1-否"
+    },
+    {
+      "field_name": "software_file",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "软件系统功能需求文档"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "chance_id",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    },
+    {
+      "column": "customer_id",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    },
+    {
+      "column": "department_id",
+      "references": {
+        "table": "zzvc_contract_department_code",
+        "column": "id"
+      }
+    },
+    {
+      "column": "saler_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "table_name": "zzvc_user_news",
+  "table_comment": "用户新闻阅读表,定义用户与新闻的阅读/关联记录。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "user_id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": "用户ID"
+    },
+    {
+      "field_name": "news_id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "news_id",
+      "references": {
+        "table": "zzvc_news",
+        "column": "id"
+      }
+    },
+    {
+      "column": "user_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

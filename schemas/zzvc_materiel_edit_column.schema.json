@@ -1,0 +1,39 @@
+{
+  "table_name": "zzvc_materiel_edit_column",
+  "table_comment": "物料编辑字段记录表,定义物料被编辑字段的记录。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "materiel_id",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "edit_column",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "materiel_id",
+      "references": {
+        "table": "zzvc_materiel",
+        "column": "id"
+      }
+    }
+  ]
+}

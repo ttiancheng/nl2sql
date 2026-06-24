@@ -1,0 +1,38 @@
+{
+  "table_name": "zzvc_contract_rate",
+  "table_comment": "合同审批税率表,定义合同审批使用的税率基础配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "value",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

@@ -1,0 +1,200 @@
+{
+  "table_name": "zzvc_company_customer_contract",
+  "table_comment": "客户联系人表,是客户联系人主数据,包含姓名、职位、电话、邮箱、部门和主联系人标记。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "姓名"
+    },
+    {
+      "field_name": "name_en",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "英文名"
+    },
+    {
+      "field_name": "job",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "职位"
+    },
+    {
+      "field_name": "first_contract_time",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "首次联系时间"
+    },
+    {
+      "field_name": "last_job_time",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "最后在职时间"
+    },
+    {
+      "field_name": "tel",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "联系电话"
+    },
+    {
+      "field_name": "wechat_number",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "微信号"
+    },
+    {
+      "field_name": "mobile",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "移动电话"
+    },
+    {
+      "field_name": "email",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "电子邮件"
+    },
+    {
+      "field_name": "picture",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "名片图片"
+    },
+    {
+      "field_name": "companyId",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "所属客户公司id"
+    },
+    {
+      "field_name": "customerId",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "绑定客户信息id"
+    },
+    {
+      "field_name": "type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0普通 1重要 2特别重要+决策层面 3决策层面 4操作层面 5不重要"
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0在职 1离职"
+    },
+    {
+      "field_name": "is_del",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0没删除 1 删除了"
+    },
+    {
+      "field_name": "department",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "部门"
+    },
+    {
+      "field_name": "create_person_id",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建人 id"
+    },
+    {
+      "field_name": "first_relationships",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "第一关系"
+    },
+    {
+      "field_name": "pid",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": "0",
+      "comment": "上级ID"
+    },
+    {
+      "field_name": "tel_label",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "电话label"
+    },
+    {
+      "field_name": "contract_token",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "唯一 用于判断是不是同一个人"
+    },
+    {
+      "field_name": "sex",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "性别"
+    },
+    {
+      "field_name": "is_main",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "companyId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    },
+    {
+      "column": "create_person_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "customerId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

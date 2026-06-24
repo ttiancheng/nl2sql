@@ -1,0 +1,74 @@
+{
+  "table_name": "zzvc_cost_detail_log_esb2",
+  "table_comment": "ESB2 成本明细操作日志表,定义ESB2 版本成本明细变更/操作日志。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uid",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "type",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "类型"
+    },
+    {
+      "field_name": "msg",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uname",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "meetingRoomId",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "所属会议室id"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "meetingRoomId",
+      "references": {
+        "table": "zzvc_meeting_room",
+        "column": "id"
+      }
+    },
+    {
+      "column": "uid",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

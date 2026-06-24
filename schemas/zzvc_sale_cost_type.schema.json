@@ -1,0 +1,31 @@
+{
+  "table_name": "zzvc_sale_cost_type",
+  "table_comment": "销售费用类型表,定义销售费用/报销费用类型配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "type",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

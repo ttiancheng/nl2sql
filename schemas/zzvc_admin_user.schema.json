@@ -1,0 +1,73 @@
+{
+  "table_name": "zzvc_admin_user",
+  "table_comment": "后台管理员用户表,管理老后台登录账号与管理端权限基础用户。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "username",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "用户名"
+    },
+    {
+      "field_name": "password",
+      "data_type": "char(32)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "last_login_ip",
+      "data_type": "varchar(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "last_login_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "listorder",
+      "data_type": "int(8)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

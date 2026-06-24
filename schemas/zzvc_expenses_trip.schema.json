@@ -1,0 +1,102 @@
+{
+  "table_name": "zzvc_expenses_trip",
+  "table_comment": "差旅行程表,定义费用报销关联的差旅行程起止时间和天数类型。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "expenses_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "transportationMode",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": "交通方式 0飞机1火车2汽车3其他"
+    },
+    {
+      "field_name": "oneWayRoundTrip",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": "单程往返 0单程 1往返"
+    },
+    {
+      "field_name": "departureCity",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "出发城市"
+    },
+    {
+      "field_name": "destinationCity",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "目的城市"
+    },
+    {
+      "field_name": "travelStartTime",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "开始时间"
+    },
+    {
+      "field_name": "travelStartTimeDayType",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": null,
+      "comment": "开始时间的 上下午 0 上午 1下午"
+    },
+    {
+      "field_name": "travelEndTime",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "结束时间"
+    },
+    {
+      "field_name": "travelEndTimeDayType",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": null,
+      "comment": "结束时间的 上下午 0 上午 1下午"
+    },
+    {
+      "field_name": "singleTimeLength",
+      "data_type": "varchar(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "时长"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "expenses_id",
+      "references": {
+        "table": "zzvc_expenses",
+        "column": "id"
+      }
+    }
+  ]
+}

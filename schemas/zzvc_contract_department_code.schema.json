@@ -1,0 +1,52 @@
+{
+  "table_name": "zzvc_contract_department_code",
+  "table_comment": "销售部门编码规则表,定义合同编码规则中的部门编码和公司主体配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "department_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "部门id"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "编码"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "company_body",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": "公司主体"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

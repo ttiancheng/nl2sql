@@ -1,0 +1,31 @@
+{
+  "table_name": "zzvc_config",
+  "table_comment": "系统配置表,定义键值型系统配置,例如阈值、提醒和搜索条件配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "config_key",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "config_value",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "成本明细导入，包含这些字段的可以导入"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

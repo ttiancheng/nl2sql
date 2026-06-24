@@ -1,0 +1,136 @@
+{
+  "table_name": "zzvc_news",
+  "table_comment": "新闻表,定义新闻内容、分类、图片、阅读和评论统计。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "title",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "small_title",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "catid",
+      "data_type": "int(8)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "image",
+      "data_type": "varchar(255)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "content",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "description",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_position",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "is_head_figure",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "is_allowcomments",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "listorder",
+      "data_type": "int(8)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "source_type",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "read_count",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": "阅读数"
+    },
+    {
+      "field_name": "upvote_count",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "comment_count",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

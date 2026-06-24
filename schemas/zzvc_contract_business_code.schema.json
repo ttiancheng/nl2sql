@@ -1,0 +1,52 @@
+{
+  "table_name": "zzvc_contract_business_code",
+  "table_comment": "合同业务编码规则表,包含合同编码规则中的业务类型名称、编码和适用部门。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "名称"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "编码"
+    },
+    {
+      "field_name": "department_ids",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "部门id 集合"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "更新时间"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

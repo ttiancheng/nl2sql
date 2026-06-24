@@ -1,0 +1,1166 @@
+{
+  "table_name": "zzvc_contract_list",
+  "table_comment": "合同明细主表,定义新版合同台账/合同明细主表,用于保存合同金额、回款、开票、阶段、销售和项目状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同编码"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同名称"
+    },
+    {
+      "field_name": "other",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "对方单位"
+    },
+    {
+      "field_name": "department",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "部门"
+    },
+    {
+      "field_name": "salesman",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "业务员"
+    },
+    {
+      "field_name": "total_money",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同总金额"
+    },
+    {
+      "field_name": "implement_money",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同执行金额"
+    },
+    {
+      "field_name": "date_signing",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同签订日期"
+    },
+    {
+      "field_name": "guarantee_date",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "保修期"
+    },
+    {
+      "field_name": "quality_money_proportion",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保金比例"
+    },
+    {
+      "field_name": "quality_money",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保金额"
+    },
+    {
+      "field_name": "contract_description",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "合同描述"
+    },
+    {
+      "field_name": "acceptance_date",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收日期"
+    },
+    {
+      "field_name": "contract_type",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同类型"
+    },
+    {
+      "field_name": "warranty_start_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保金开始日期"
+    },
+    {
+      "field_name": "warranty_end_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保金结束时间"
+    },
+    {
+      "field_name": "poNumber",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "PO号"
+    },
+    {
+      "field_name": "poDate",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": "0",
+      "comment": "po日期"
+    },
+    {
+      "field_name": "customer_type",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户类型"
+    },
+    {
+      "field_name": "contract_nature",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同性质"
+    },
+    {
+      "field_name": "payment_condition",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "付款条件"
+    },
+    {
+      "field_name": "opening_ticket_money",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "已开票金额"
+    },
+    {
+      "field_name": "received_ticket_money",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "已收票金额"
+    },
+    {
+      "field_name": "received_money",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "已收金额"
+    },
+    {
+      "field_name": "prepayment_ratio",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "预付款比例"
+    },
+    {
+      "field_name": "advance_payment",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "预付款开票"
+    },
+    {
+      "field_name": "advance_payment_receipts",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "预付款收款"
+    },
+    {
+      "field_name": "payment_proportion",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "到货款比例"
+    },
+    {
+      "field_name": "payment_ticket_opening",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "到货款开票"
+    },
+    {
+      "field_name": "payment_receivables",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "到货款收款"
+    },
+    {
+      "field_name": "inspection_money_proportion",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收款比例"
+    },
+    {
+      "field_name": "inspection_money_opening",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收款开票"
+    },
+    {
+      "field_name": "inspection_money_receivables",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收款收款"
+    },
+    {
+      "field_name": "quality_ticket_opening",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保款开票"
+    },
+    {
+      "field_name": "quality_money_received",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保款收款"
+    },
+    {
+      "field_name": "project_person_charge",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目负责人"
+    },
+    {
+      "field_name": "construction_receiving_address",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "施工/收货地点"
+    },
+    {
+      "field_name": "startup_work_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "开工时间"
+    },
+    {
+      "field_name": "whether_receive",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "是否收货"
+    },
+    {
+      "field_name": "whether_construction",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "是否完成施工"
+    },
+    {
+      "field_name": "whether_acceptance_signature",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "是否签字验收"
+    },
+    {
+      "field_name": "whether_acceptance_seal",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收报告是否盖章"
+    },
+    {
+      "field_name": "Requirement_acceptance_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同要求验收时间"
+    },
+    {
+      "field_name": "whether_file",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "竣工文档是否归档（含中控程序）"
+    },
+    {
+      "field_name": "current_state",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "当前状态"
+    },
+    {
+      "field_name": "ghost_work",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "遗留工作"
+    },
+    {
+      "field_name": "after_sales_person",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "售后服务工程师"
+    },
+    {
+      "field_name": "inspection_requirements",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "巡检要求"
+    },
+    {
+      "field_name": "special_requirements",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "其他特殊要求"
+    },
+    {
+      "field_name": "service_report_seal",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "服务报告是否盖章"
+    },
+    {
+      "field_name": "service_report_file",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "服务报告是否归档"
+    },
+    {
+      "field_name": "signed_object",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "签署对象"
+    },
+    {
+      "field_name": "project_type",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目类型"
+    },
+    {
+      "field_name": "start_service",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "开始服务"
+    },
+    {
+      "field_name": "stop_service",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "服务结束"
+    },
+    {
+      "field_name": "endup_work_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "完工时间"
+    },
+    {
+      "field_name": "amount_collected",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "choice",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "选择"
+    },
+    {
+      "field_name": "status",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同状态"
+    },
+    {
+      "field_name": "nature",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同性质"
+    },
+    {
+      "field_name": "payment_agreement_name",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "收付款协议名称"
+    },
+    {
+      "field_name": "acceptance_amount",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收金额"
+    },
+    {
+      "field_name": "dataRecoveryTimeStamp",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "数据导入时间戳"
+    },
+    {
+      "field_name": "dataStatusIsDisplay",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": "导入状态是否显示"
+    },
+    {
+      "field_name": "early_delivery",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "提前采购 0不提前 1提前"
+    },
+    {
+      "field_name": "is_firstpay",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "预付状态通知，0没通知 1通知过"
+    },
+    {
+      "field_name": "is_arrival",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "到货状态通知 0没通知 1通知过"
+    },
+    {
+      "field_name": "is_progress",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "进度状态通知 0没通知 1通知过"
+    },
+    {
+      "field_name": "is_acceptance",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "验收状态通知 0没通知 1通知过"
+    },
+    {
+      "field_name": "is_state",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "质保状态通知 0没通知 1通知过"
+    },
+    {
+      "field_name": "is_firstpay_state",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "预付款状态确认  0没确认 1确认"
+    },
+    {
+      "field_name": "is_firstpay_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售预付款确认时间"
+    },
+    {
+      "field_name": "is_arrival_state",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "到货状态确认  0没确认 1确认"
+    },
+    {
+      "field_name": "is_arrival_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售到货状态确认时间"
+    },
+    {
+      "field_name": "is_progress_state",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "进度状态确认  0没确认 1确认"
+    },
+    {
+      "field_name": "is_progress_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "进度状态确认时间"
+    },
+    {
+      "field_name": "is_acceptance_state",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "验收状态确认 0没确认 1确认"
+    },
+    {
+      "field_name": "is_acceptance_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收状态确认时间"
+    },
+    {
+      "field_name": "is_state_state",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "质保状态确认 0没确认 1确认"
+    },
+    {
+      "field_name": "is_state_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保状态确认时间"
+    },
+    {
+      "field_name": "is_firstpay_add_complete",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "开票类型->预付 添加完成 ，0没有添加 1添加了"
+    },
+    {
+      "field_name": "is_arrival_add_complete",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "开票类型-> 到货 添加完成 ，0没有添加 1添加了"
+    },
+    {
+      "field_name": "is_progress_add_complete",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "开票类型-> 进度 添加完成 ，0没有添加 1添加了"
+    },
+    {
+      "field_name": "is_acceptance_add_complete",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "开票类型-> 验收 添加完成 ，0没有添加 1添加了"
+    },
+    {
+      "field_name": "is_state_add_complete",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "开票类型-> 质保 添加完成 ，0没有添加 1添加了"
+    },
+    {
+      "field_name": "is_firstpay_add_complete_queren",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "预付"
+    },
+    {
+      "field_name": "is_arrival_add_complete_queren",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "is_progress_add_complete_queren",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "is_acceptance_add_complete_queren",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "is_state_add_complete_queren",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "is_firstpay_add_complete_queren_beizhu",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_arrival_add_complete_queren_beizhu",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_progress_add_complete_queren_beizhu",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_acceptance_add_complete_queren_beizhu",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_state_add_complete_queren_beizhu",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "maintain_date_start",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "maintain_date_end",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "sszht",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "zbkriqi",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "yskriqi",
+      "data_type": "int(111)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "ykpriqi",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "dhkriqi",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "yfkriqi",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "skrq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "skje",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "skkp",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "skbl",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "htxxtxwb",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "sgqktxwb",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "zbksrq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "zbjsrq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "kpysje",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "yglrl",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "khgzl",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys1bl",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys1je",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys2bl",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys3bl",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys4bl",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys2je",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys3je",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys4je",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys1rq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys2rq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys3rq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "lrys4rq",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "addrowserial",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "khzq",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "ysxs",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "xmkssj",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "xmjssj",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "khlxr",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "htxz",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "marketmoney",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2019zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2020zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2021zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "hlys",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "salesman2",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "summary_remarks",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "delayTimeVal",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "emailNoticesEarly",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "提前采购 邮件提示 0未发  1已发"
+    },
+    {
+      "field_name": "smsNoticesEarly",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "提前采购 短信提示 0未发  1已发"
+    },
+    {
+      "field_name": "isChangeSalesman",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "合同导入  是否可以覆盖销售字段(销售合同负责人变更后为1) 0可以1可以"
+    },
+    {
+      "field_name": "companyId",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0上海直真视通科技有限公司 1上海直真空点信息技术有限公司"
+    },
+    {
+      "field_name": "chanceId",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售机会"
+    },
+    {
+      "field_name": "companyBody",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "签约主体"
+    },
+    {
+      "field_name": "total_money_u8",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_contract_receivable_zero",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": "合同应收金额为空 0为空 1 不为空"
+    },
+    {
+      "field_name": "open_bill_money",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_contract_openbill_zero",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": "开票应收金额为空 0为空 1 不为空"
+    },
+    {
+      "field_name": "user_id",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "department_id",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contracts_received",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "open_bill_received",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "isPassNormal",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "isPassAfterUn",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "overdue",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "xmmlv",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "htmlv",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "chanceId",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    },
+    {
+      "column": "companyId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    },
+    {
+      "column": "department_id",
+      "references": {
+        "table": "zzvc_contract_department_code",
+        "column": "id"
+      }
+    },
+    {
+      "column": "user_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

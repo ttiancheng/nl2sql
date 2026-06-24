@@ -1,0 +1,46 @@
+{
+  "table_name": "zzvc_device_basic_norm",
+  "table_comment": "产品选型基础参数表,定义产品选型设备的键值参数。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "k",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "v",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "companyId",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "companyId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "table_name": "zzvc_contract_list_openbill_comment",
+  "table_comment": "合同开票回款评论表,定义合同开票/回款阶段备注、撤销和评论记录。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "user_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "评论人id"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同编码"
+    },
+    {
+      "field_name": "stage",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "执行阶段"
+    },
+    {
+      "field_name": "content",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "评论内容"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "1",
+      "comment": "1 正常  2 撤回"
+    },
+    {
+      "field_name": "revoke_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "撤回时间"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "user_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

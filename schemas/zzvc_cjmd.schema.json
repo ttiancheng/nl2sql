@@ -1,0 +1,31 @@
+{
+  "table_name": "zzvc_cjmd",
+  "table_comment": "厂家名单表,定义厂家/厂商名单基础数据。",
+  "fields": [
+    {
+      "field_name": "name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "姓名"
+    },
+    {
+      "field_name": "id",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

@@ -1,0 +1,53 @@
+{
+  "table_name": "zzvc_expenses_revoke",
+  "table_comment": "费用报销撤销表,定义费用报销撤销原因、时间和操作人。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "expenses_id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "revoke_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "revoke_remark",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "revoke_user_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "expenses_id",
+      "references": {
+        "table": "zzvc_expenses",
+        "column": "id"
+      }
+    }
+  ]
+}

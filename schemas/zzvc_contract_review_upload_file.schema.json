@@ -1,0 +1,81 @@
+{
+  "table_name": "zzvc_contract_review_upload_file",
+  "table_comment": "销售合同审批附件表,定义销售合同审批关联文件元数据。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "review_id",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同审批流程 id"
+    },
+    {
+      "field_name": "fileId",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileName",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileSize",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileType",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "spaceId",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "file_mark",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "review_id",
+      "references": {
+        "table": "zzvc_contract_review",
+        "column": "id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "table_name": "zzvc_contract_po",
+  "table_comment": "合同 PO 表,定义合同关联 PO 编号、金额和日期。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "po_number",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "po_money",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "po_date",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": "0",
+      "comment": "po日期"
+    },
+    {
+      "field_name": "contract_id",
+      "data_type": "int(150)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "contract_id",
+      "references": {
+        "table": "zzvc_contract",
+        "column": "id"
+      }
+    }
+  ]
+}

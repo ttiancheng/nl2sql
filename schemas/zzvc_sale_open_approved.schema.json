@@ -1,0 +1,31 @@
+{
+  "table_name": "zzvc_sale_open_approved",
+  "table_comment": "销售开票审批汇总表,定义销售开票审批相关联系人或统计信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "total_tel",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "total_name",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

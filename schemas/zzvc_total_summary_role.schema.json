@@ -1,0 +1,67 @@
+{
+  "table_name": "zzvc_total_summary_role",
+  "table_comment": "合同汇总角色表,定义合同汇总/统计页面的角色权限配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "role_name",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "menu_arr_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "remarks",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uid",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "uid",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

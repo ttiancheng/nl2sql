@@ -1,0 +1,101 @@
+{
+  "table_name": "zzvc_sync_bill_record",
+  "table_comment": "开票同步记录表,定义开票/回票同步记录和提醒状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "open_ticket_date",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票日期"
+    },
+    {
+      "field_name": "buyer_enterprise_name",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "购方企业名称"
+    },
+    {
+      "field_name": "money",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "tax_rate",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "tax_amount",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "total",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目编码"
+    },
+    {
+      "field_name": "return_date",
+      "data_type": "varchar(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "回款日期"
+    },
+    {
+      "field_name": "emailNoticesPrompt",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "催款邮件 提示 0未发  1已发"
+    },
+    {
+      "field_name": "smsNoticesPrompt",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "催款短信 提示 0未发  1已发"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "open_bill_type",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

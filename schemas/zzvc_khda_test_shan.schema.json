@@ -1,0 +1,52 @@
+{
+  "table_name": "zzvc_khda_test_shan",
+  "table_comment": "客户档案测试表,定义客户档案测试/临时表。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(222)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "jiancheng",
+      "data_type": "varchar(222)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fazhanshijian",
+      "data_type": "varchar(222)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "jiandangren",
+      "data_type": "varchar(222)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

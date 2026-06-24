@@ -1,0 +1,74 @@
+{
+  "table_name": "zzvc_cost_maintain",
+  "table_comment": "成本维护明细表,定义成本维护批次、序列号、数量和单位。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "costId",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "meetingRoomId",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "serialnumber",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "序列号"
+    },
+    {
+      "field_name": "batch",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "批次"
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": "0故障 1正常"
+    },
+    {
+      "field_name": "number",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "数量"
+    },
+    {
+      "field_name": "unit",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "单位"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "meetingRoomId",
+      "references": {
+        "table": "zzvc_meeting_room",
+        "column": "id"
+      }
+    }
+  ]
+}

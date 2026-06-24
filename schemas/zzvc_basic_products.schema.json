@@ -1,0 +1,52 @@
+{
+  "table_name": "zzvc_basic_products",
+  "table_comment": "商品信息表,是发票/采购相关商品基础资料表单,包含商品名称、税率、税收编码和对应名称。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "商品名称"
+    },
+    {
+      "field_name": "tax",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "税率"
+    },
+    {
+      "field_name": "tax_code",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "税收编码"
+    },
+    {
+      "field_name": "corresponding_name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "对应名称"
+    },
+    {
+      "field_name": "use_number",
+      "data_type": "int(150)",
+      "nullable": true,
+      "default": "0",
+      "comment": "使用次数"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

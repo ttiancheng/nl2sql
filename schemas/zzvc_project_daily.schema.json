@@ -1,0 +1,129 @@
+{
+  "table_name": "zzvc_project_daily",
+  "table_comment": "工程日报表,是工程日报主表，用于保存日报编号、创建人、部门、图片、工时和计划。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "report_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "creator_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "creator_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "dept_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "images",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "modified_time",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "today_info",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "device_arrival_plan",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "build_schedule",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contract_other",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "esb_report_id",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "report_id_prefix",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "report_id_suffix",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_local_download",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0未下载本地  1已下载本地"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

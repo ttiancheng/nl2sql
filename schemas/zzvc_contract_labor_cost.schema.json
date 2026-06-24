@@ -1,0 +1,87 @@
+{
+  "table_name": "zzvc_contract_labor_cost",
+  "table_comment": "劳务成本方向表,定义合同审批外部劳务成本科目或方向配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目编码"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目名称"
+    },
+    {
+      "field_name": "direction",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "方向"
+    },
+    {
+      "field_name": "first_money",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "borrow_money",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "loan_money",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "direction2",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "方向_"
+    },
+    {
+      "field_name": "end_surplus_money",
+      "data_type": "decimal",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "datetime",
+      "data_type": "varchar(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "companyBody",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "签约主体"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

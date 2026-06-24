@@ -1,0 +1,248 @@
+{
+  "table_name": "zzvc_contract",
+  "table_comment": "老合同主表,定义旧版合同录入/销售管理合同信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "date_signing",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "签订日期"
+    },
+    {
+      "field_name": "number",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同编号"
+    },
+    {
+      "field_name": "signatory",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同签署方"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(15)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目名称"
+    },
+    {
+      "field_name": "object",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "签署对象"
+    },
+    {
+      "field_name": "type",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目类型"
+    },
+    {
+      "field_name": "money",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目金额"
+    },
+    {
+      "field_name": "sale",
+      "data_type": "varchar(15)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售"
+    },
+    {
+      "field_name": "construction",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "施工/收货地点"
+    },
+    {
+      "field_name": "nature",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同性质"
+    },
+    {
+      "field_name": "acceptance",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收形式"
+    },
+    {
+      "field_name": "manager",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目经理"
+    },
+    {
+      "field_name": "status",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目状态"
+    },
+    {
+      "field_name": "signin",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "是否签收、验收"
+    },
+    {
+      "field_name": "file",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "是否归档"
+    },
+    {
+      "field_name": "acceptance_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收时间"
+    },
+    {
+      "field_name": "gold",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保金"
+    },
+    {
+      "field_name": "period",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保期限"
+    },
+    {
+      "field_name": "start_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保期开始时间"
+    },
+    {
+      "field_name": "end_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "质保期结束时间"
+    },
+    {
+      "field_name": "customer_acceptor",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户验收人"
+    },
+    {
+      "field_name": "seal_contact",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "盖章联系人"
+    },
+    {
+      "field_name": "official_seal",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户公章"
+    },
+    {
+      "field_name": "description_seal",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "盖章情况说明"
+    },
+    {
+      "field_name": "sales_information",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售提供信息"
+    },
+    {
+      "field_name": "money_receipt",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "收款金额"
+    },
+    {
+      "field_name": "date_receipt",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "收款日期"
+    },
+    {
+      "field_name": "sign_situation",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "签收情况"
+    },
+    {
+      "field_name": "proportion",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "比例"
+    },
+    {
+      "field_name": "expected_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "预计验收时间"
+    },
+    {
+      "field_name": "entry_u8",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "验收时间录入U8情况"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

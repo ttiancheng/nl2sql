@@ -1,0 +1,430 @@
+{
+  "table_name": "zzvc_company_customer",
+  "table_comment": "客户信息表,是客户主档,用于保存客户编码、名称、工商、开票、归属和授权信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "所属公司code"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "公司名字"
+    },
+    {
+      "field_name": "short_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司简称"
+    },
+    {
+      "field_name": "category",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司列别"
+    },
+    {
+      "field_name": "business",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "所属行业"
+    },
+    {
+      "field_name": "address",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司地区"
+    },
+    {
+      "field_name": "postal_code",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "邮政编码"
+    },
+    {
+      "field_name": "staff_size",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "人员规模"
+    },
+    {
+      "field_name": "rating",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "信用等级"
+    },
+    {
+      "field_name": "intro",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "公司简介"
+    },
+    {
+      "field_name": "info_source",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "信息来源"
+    },
+    {
+      "field_name": "relation_grade",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "关系等级"
+    },
+    {
+      "field_name": "switchboard",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司总机"
+    },
+    {
+      "field_name": "website",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司官网"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "档案建立时间"
+    },
+    {
+      "field_name": "gs_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "工商信息_公司名称"
+    },
+    {
+      "field_name": "legal_person",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "法定代理人"
+    },
+    {
+      "field_name": "credit",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "统一社会信用代码"
+    },
+    {
+      "field_name": "registered_address",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "注册地址"
+    },
+    {
+      "field_name": "business_address",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "办公地址"
+    },
+    {
+      "field_name": "registered_capital",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "注册资本"
+    },
+    {
+      "field_name": "established_time",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "成立时间"
+    },
+    {
+      "field_name": "closing_time",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "营业截止时间"
+    },
+    {
+      "field_name": "business_photo",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "营业执照图片"
+    },
+    {
+      "field_name": "sw_info_ids",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "税务_公司名称"
+    },
+    {
+      "field_name": "payment_day",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "商务信息 应付账期(天)"
+    },
+    {
+      "field_name": "receipt_day",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "商务信息 应收账期(天)"
+    },
+    {
+      "field_name": "invoice_type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "合规发票类型"
+    },
+    {
+      "field_name": "tax_point",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "税点"
+    },
+    {
+      "field_name": "contacts_info_ids",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "联系人信息"
+    },
+    {
+      "field_name": "stakeholder_info_ids",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "干系人信息"
+    },
+    {
+      "field_name": "open_bank",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 开户银行"
+    },
+    {
+      "field_name": "address_bank",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 银行地址"
+    },
+    {
+      "field_name": "account_bank",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 银行账号"
+    },
+    {
+      "field_name": "company_tax_number",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司税号"
+    },
+    {
+      "field_name": "associate_bank_number",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 银行联行号"
+    },
+    {
+      "field_name": "final_money_type",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 结算币种"
+    },
+    {
+      "field_name": "invoice_file",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 公司开票信息文件"
+    },
+    {
+      "field_name": "open_licence_photo",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 开户许可证图片"
+    },
+    {
+      "field_name": "create_person",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "建档人"
+    },
+    {
+      "field_name": "saler",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "销售人员"
+    },
+    {
+      "field_name": "number",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "编号"
+    },
+    {
+      "field_name": "number_date",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "编号_日期"
+    },
+    {
+      "field_name": "number_no",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "编号_编号"
+    },
+    {
+      "field_name": "customer_address",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户地址"
+    },
+    {
+      "field_name": "country",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "国家"
+    },
+    {
+      "field_name": "province",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "省"
+    },
+    {
+      "field_name": "city",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "城市"
+    },
+    {
+      "field_name": "bill_tel",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 联系电话"
+    },
+    {
+      "field_name": "bill_address",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "开票信息 开票地址"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "更新时间"
+    },
+    {
+      "field_name": "life_cycle",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": "1",
+      "comment": "生命周期 1潜在 2 签约 3重复购买 4 失效"
+    },
+    {
+      "field_name": "write_auth_ids",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "写权限"
+    },
+    {
+      "field_name": "read_auth_ids",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "读权限"
+    },
+    {
+      "field_name": "is_common",
+      "data_type": "tinyint(4)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0不是公共 1 公共数据"
+    },
+    {
+      "field_name": "high_sea_group",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": "0",
+      "comment": "公海客户组"
+    },
+    {
+      "field_name": "client_property",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "main_customer",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": "-1",
+      "comment": null
+    },
+    {
+      "field_name": "area",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户地区"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

@@ -1,0 +1,200 @@
+{
+  "table_name": "zzvc_gift_apply",
+  "table_comment": "赠品审批表,是赠品审批主表,用于保存合同、客户、金额、附件和钉钉审批信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "user_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "销售人员id"
+    },
+    {
+      "field_name": "review_date",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "评审日期"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "主合同编号"
+    },
+    {
+      "field_name": "customer_name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户名称"
+    },
+    {
+      "field_name": "contract_name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "项目名称"
+    },
+    {
+      "field_name": "if_project_installed",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "1 是 0 否"
+    },
+    {
+      "field_name": "reason",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "赠送原因"
+    },
+    {
+      "field_name": "goods_name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "物品名称"
+    },
+    {
+      "field_name": "quantity",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "数量"
+    },
+    {
+      "field_name": "unit_price",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "单价"
+    },
+    {
+      "field_name": "total_money",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "赠送金额总计"
+    },
+    {
+      "field_name": "picture",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "图片"
+    },
+    {
+      "field_name": "file",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "赠送清单"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "备注"
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "approvals_status",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": "1",
+      "comment": "1 待提交 2审批中 3已拒绝 4已撤销 5已通过"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "最后更新时间"
+    },
+    {
+      "field_name": "dd_approvals_start_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "钉钉审批发起时间"
+    },
+    {
+      "field_name": "is_download_local",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0未下载 1已下载"
+    },
+    {
+      "field_name": "gift_code",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同编号"
+    },
+    {
+      "field_name": "code_serial_no",
+      "data_type": "int(4)",
+      "nullable": true,
+      "default": null,
+      "comment": "code后四位数字"
+    },
+    {
+      "field_name": "department_id",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "company_body",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "0直真 1空点"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "department_id",
+      "references": {
+        "table": "zzvc_contract_department_code",
+        "column": "id"
+      }
+    },
+    {
+      "column": "user_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

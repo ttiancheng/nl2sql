@@ -1,0 +1,325 @@
+{
+  "table_name": "zzvc_device_metrics",
+  "table_comment": "产品选型设备表,是产品选型主表,用于保存产品名称、型号、图片、规格和 PO 包装参数。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "basic_name",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 产品名称"
+    },
+    {
+      "field_name": "basic_model",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 产品型号"
+    },
+    {
+      "field_name": "basic_classify",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 产品分类"
+    },
+    {
+      "field_name": "basic_brand",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 品牌信息"
+    },
+    {
+      "field_name": "basic_factory",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 生产厂家"
+    },
+    {
+      "field_name": "basic_describe",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 产品描述"
+    },
+    {
+      "field_name": "basic_norm",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 关键指标"
+    },
+    {
+      "field_name": "basic_3d",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 三维模型"
+    },
+    {
+      "field_name": "basic_pic",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 产品图片"
+    },
+    {
+      "field_name": "basic_specification_manual",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 产品规格书"
+    },
+    {
+      "field_name": "basic_operation_manual",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 操作指导书"
+    },
+    {
+      "field_name": "basic_level",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "推荐等级"
+    },
+    {
+      "field_name": "basic_remark",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "基本信息 备注"
+    },
+    {
+      "field_name": "po_name",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 产品名称"
+    },
+    {
+      "field_name": "po_product_size",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 产品尺寸"
+    },
+    {
+      "field_name": "po_product_weight",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 产品重量"
+    },
+    {
+      "field_name": "po_packing_size",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 包装尺寸"
+    },
+    {
+      "field_name": "po_packing_num",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 包装数量"
+    },
+    {
+      "field_name": "po_packing_weight",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 包装重量"
+    },
+    {
+      "field_name": "po_reference_price",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 参考价格"
+    },
+    {
+      "field_name": "po_min_package",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 最小包装"
+    },
+    {
+      "field_name": "po_min_quantity",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 最小起订量"
+    },
+    {
+      "field_name": "po_supply_period",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 标准供货周期(周)"
+    },
+    {
+      "field_name": "po_warranty_period",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 质保期(年)"
+    },
+    {
+      "field_name": "po_serialnumber",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 批次/序列号"
+    },
+    {
+      "field_name": "po_remark",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购信息 备注"
+    },
+    {
+      "field_name": "bom_name",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 设备名称"
+    },
+    {
+      "field_name": "bom_model",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 设备型号"
+    },
+    {
+      "field_name": "bom_brand",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 品牌信息"
+    },
+    {
+      "field_name": "bom_factory",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 生产厂家"
+    },
+    {
+      "field_name": "bom_config_num",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 配置数量"
+    },
+    {
+      "field_name": "bom_packing_num",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 包装数量"
+    },
+    {
+      "field_name": "bom_packing_weight",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 包装重量"
+    },
+    {
+      "field_name": "bom_specification_manual",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 产品规格书"
+    },
+    {
+      "field_name": "bom_operation_manual",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 操作指导书"
+    },
+    {
+      "field_name": "bom_remark",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 备注"
+    },
+    {
+      "field_name": "po_serialnumber_type",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "po_product_l",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "产品尺寸  长"
+    },
+    {
+      "field_name": "po_product_w",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "产品尺寸  宽"
+    },
+    {
+      "field_name": "po_product_h",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "产品尺寸  高"
+    },
+    {
+      "field_name": "po_pocking_l",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "包装尺寸 长"
+    },
+    {
+      "field_name": "po_pocking_w",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "包装尺寸 宽"
+    },
+    {
+      "field_name": "po_pocking_h",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "包装尺寸 高"
+    },
+    {
+      "field_name": "basic_metering",
+      "data_type": "varchar(80)",
+      "nullable": true,
+      "default": null,
+      "comment": "计量单位"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

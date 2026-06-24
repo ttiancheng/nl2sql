@@ -1,0 +1,67 @@
+{
+  "table_name": "zzvc_customer_contract_stem",
+  "table_comment": "客户合同访问令牌表,定义 客户合同/联系人访问 token 或临时关系记录。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contract_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "联系人ID"
+    },
+    {
+      "field_name": "project_stem",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目干系"
+    },
+    {
+      "field_name": "person_stem",
+      "data_type": "varchar(255)",
+      "nullable": true,
+      "default": null,
+      "comment": "人员干系"
+    },
+    {
+      "field_name": "customer_id",
+      "data_type": "int(40)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户ID"
+    },
+    {
+      "field_name": "access_token",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "唯一token"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "contract_id",
+      "references": {
+        "table": "zzvc_contract",
+        "column": "id"
+      }
+    },
+    {
+      "column": "customer_id",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

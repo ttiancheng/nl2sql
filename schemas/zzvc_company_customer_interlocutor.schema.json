@@ -1,0 +1,53 @@
+{
+  "table_name": "zzvc_company_customer_interlocutor",
+  "table_comment": "商机沟通人关系表,定义销售机会与客户联系人/沟通人的关联关系。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "business_chance_id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "所属销售机会"
+    },
+    {
+      "field_name": "person_id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "干系人id"
+    },
+    {
+      "field_name": "person_type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "干系人类型"
+    },
+    {
+      "field_name": "project_type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目干系人"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "business_chance_id",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    }
+  ]
+}

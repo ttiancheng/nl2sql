@@ -1,0 +1,10 @@
+{
+    "host": "172.16.5.42",
+    "port": 3307,
+    "user": "esb",
+    "password": "zzvc888",
+    "database": "esb",
+    "connect_timeout": 5,
+    "charset": "utf8mb4",
+    "row_limit": 200
+}

@@ -1,0 +1,187 @@
+{
+  "table_name": "zzvc_business_before_sale",
+  "table_comment": "售前行动记录表,包含商机相关售前行动、完成期限、行为结果和后续计划。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "before_sale_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "售前时间"
+    },
+    {
+      "field_name": "join_person",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "参与人员"
+    },
+    {
+      "field_name": "before_sale_content",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "售前内容"
+    },
+    {
+      "field_name": "project_demand",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "项目需求"
+    },
+    {
+      "field_name": "current_stage",
+      "data_type": "varchar(40)",
+      "nullable": true,
+      "default": null,
+      "comment": "所处阶段"
+    },
+    {
+      "field_name": "chance_Id",
+      "data_type": "int(40)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售机会id"
+    },
+    {
+      "field_name": "uId",
+      "data_type": "int(40)",
+      "nullable": false,
+      "default": null,
+      "comment": "发起人id"
+    },
+    {
+      "field_name": "join_person_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "参与人员姓名"
+    },
+    {
+      "field_name": "type",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": "0",
+      "comment": "0：待办 1：行动历史"
+    },
+    {
+      "field_name": "do_type",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "行动类型"
+    },
+    {
+      "field_name": "customer",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户联系人"
+    },
+    {
+      "field_name": "join_chance",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "是否关联销售机会 "
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "company_customer",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户"
+    },
+    {
+      "field_name": "future_process_finished",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "代办 是否完成 0未完成 1已完成c"
+    },
+    {
+      "field_name": "future_process_finished_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": "0",
+      "comment": "代办 完成时间"
+    },
+    {
+      "field_name": "serial_number_prefix",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售日志 显示ID前缀"
+    },
+    {
+      "field_name": "serial_number_suffix",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售日志 显示ID后缀"
+    },
+    {
+      "field_name": "behavior_content",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "行为描述"
+    },
+    {
+      "field_name": "behavior_result",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "行为结果"
+    },
+    {
+      "field_name": "follow_up",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "后续工作"
+    },
+    {
+      "field_name": "help_saler_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "传帮带  销售id 逗号隔开"
+    }
+  ],
+  "primary_key": [
+    "id",
+    "type"
+  ],
+  "foreign_keys": [
+    {
+      "column": "chance_Id",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    },
+    {
+      "column": "uId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

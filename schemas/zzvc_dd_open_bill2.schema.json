@@ -1,0 +1,263 @@
+{
+  "table_name": "zzvc_dd_open_bill2",
+  "table_comment": "钉钉开票申请明细表,定义新版钉钉开票申请、产品文件、公司主体、同步和完成状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户名称"
+    },
+    {
+      "field_name": "taxNumber",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户税号"
+    },
+    {
+      "field_name": "addressTel",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "地址电话"
+    },
+    {
+      "field_name": "accountBank",
+      "data_type": "varchar(150)",
+      "nullable": false,
+      "default": null,
+      "comment": "银行账号"
+    },
+    {
+      "field_name": "productName",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "商品名称"
+    },
+    {
+      "field_name": "model",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "规格型号"
+    },
+    {
+      "field_name": "metering",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "计量单位"
+    },
+    {
+      "field_name": "size",
+      "data_type": "varchar(80)",
+      "nullable": false,
+      "default": null,
+      "comment": "数量"
+    },
+    {
+      "field_name": "unitPrice",
+      "data_type": "varchar(80)",
+      "nullable": false,
+      "default": null,
+      "comment": "单价"
+    },
+    {
+      "field_name": "price",
+      "data_type": "varchar(80)",
+      "nullable": false,
+      "default": null,
+      "comment": "金额"
+    },
+    {
+      "field_name": "taxRate",
+      "data_type": "varchar(80)",
+      "nullable": false,
+      "default": null,
+      "comment": "税率"
+    },
+    {
+      "field_name": "typeCode",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "分类编码"
+    },
+    {
+      "field_name": "collectionDate",
+      "data_type": "varchar(150)",
+      "nullable": false,
+      "default": null,
+      "comment": "预计收款日期"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "备注"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同编号"
+    },
+    {
+      "field_name": "cId",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uId",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "上传人"
+    },
+    {
+      "field_name": "token",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "ticketNumber",
+      "data_type": "int(150)",
+      "nullable": false,
+      "default": null,
+      "comment": "票据"
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "丁丁 申请id"
+    },
+    {
+      "field_name": "applyTime",
+      "data_type": "int(40)",
+      "nullable": true,
+      "default": null,
+      "comment": "发布申请时间"
+    },
+    {
+      "field_name": "product_file_name",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "详见销货清单 附件"
+    },
+    {
+      "field_name": "uDepartmentId",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "发起人部门id"
+    },
+    {
+      "field_name": "billType",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0纸质增值税专用发票 1纸质增值税普通发票 2全电发票"
+    },
+    {
+      "field_name": "companyId",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0上海直真 1 空点"
+    },
+    {
+      "field_name": "worksPlace",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "施工地点"
+    },
+    {
+      "field_name": "isSync",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0未同步 1已同步"
+    },
+    {
+      "field_name": "nullify_reason",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "作废原因"
+    },
+    {
+      "field_name": "companyBody",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "签约主体"
+    },
+    {
+      "field_name": "applyFinishedTime",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "applyFinishedStatus",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0待提交 1审批中 2已撤销 3 已拒绝 4 已通过"
+    },
+    {
+      "field_name": "open_bill_type",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "1预付款（首款）2到货款（进度款） 3验收款 4设备质保款"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "cId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "companyId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    },
+    {
+      "column": "uId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

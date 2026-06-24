@@ -1,0 +1,52 @@
+{
+  "table_name": "zzvc_company_authorization",
+  "table_comment": "公司授权表,定义公司授权邮箱、机器码、截止日期和提醒状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "id"
+    },
+    {
+      "field_name": "company",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司名称"
+    },
+    {
+      "field_name": "email",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "邮箱"
+    },
+    {
+      "field_name": "mac_address",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "MAC地址"
+    },
+    {
+      "field_name": "dead_line",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "截止时间"
+    },
+    {
+      "field_name": "is_alert",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "是否 已经提醒 0未提醒 1已提醒"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

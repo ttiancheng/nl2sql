@@ -1,0 +1,45 @@
+{
+  "table_name": "zzvc_contact_chance",
+  "table_comment": "联系人商机关联表,定义联系人与销售机会之间的关联关系。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contact_id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同id"
+    },
+    {
+      "field_name": "chances_id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "销售机会id"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "更新时间"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

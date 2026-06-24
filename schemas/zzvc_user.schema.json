@@ -1,0 +1,374 @@
+{
+  "table_name": "zzvc_user",
+  "table_comment": "用户表,定义系统用户、销售人员、部门、平台角色、指标和登录信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "username",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "password",
+      "data_type": "char(32)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "passwordmw",
+      "data_type": "char(32)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "phone",
+      "data_type": "varchar(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "token",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "time_out",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "image",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "sex",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "性别0男 1女"
+    },
+    {
+      "field_name": "signature",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "个性签名"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "realname",
+      "data_type": "varchar(15)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "department",
+      "data_type": "int(15)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "last_login_ip",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "last_login_time",
+      "data_type": "int(10)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "super",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "contract_pagecount",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": "10",
+      "comment": "合同每页条数"
+    },
+    {
+      "field_name": "contract_columns_name",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "合同显示栏目名称"
+    },
+    {
+      "field_name": "isLeader",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "是否是部门领导"
+    },
+    {
+      "field_name": "platforms",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "platform_department",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "mail",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2019zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2020zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2021zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "last_bill_apply_token",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "开票申请最后一次token"
+    },
+    {
+      "field_name": "is_bill_saleman",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "开票申请 销售人 0不是 1是"
+    },
+    {
+      "field_name": "saleman_level",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0普通销售 1销售管理 2最高销售管理3其它"
+    },
+    {
+      "field_name": "company_leader",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0不是 1公司大领导"
+    },
+    {
+      "field_name": "2022zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2023zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2024zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2025zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_leavel",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": "1在职 2离职"
+    },
+    {
+      "field_name": "2026zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2027zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2028zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2029zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2030zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2031zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2032zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2033zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2034zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2035zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2036zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2037zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2038zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2039zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "2040zhibiao",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

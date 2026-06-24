@@ -1,0 +1,403 @@
+{
+  "table_name": "zzvc_expenses",
+  "table_comment": "费用报销表,是销售费用/差旅/报销记录,用于保存费用、客户、合同、审批和报销状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "expenses_id_prefix",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "报销单 显示ID前缀"
+    },
+    {
+      "field_name": "expenses_id_suffix",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "报销单 显示ID后缀"
+    },
+    {
+      "field_name": "sales_cost_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "费用 id集合"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "picture",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "files",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "total_amount",
+      "data_type": "float",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "borrow_amount",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "paid_amount",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "travel_reason",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "join_approval_form",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fee_type",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "bank_account",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "cost_id",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "before_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "after_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "customer_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "customer_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contacts_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contacts_code",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "chance_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contracts_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contracts_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_person_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_person_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "cost_type",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "cost_type_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "invoice_num",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "money",
+      "data_type": "float",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "purpose",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "reimbursement_status",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "expenses_id",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "expenses_id_oper",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "expenses_id_oper_status",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contacts_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "chance_id",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "before_place",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "after_place",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_sketch",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0非草稿数据  1 草稿数据"
+    },
+    {
+      "field_name": "travelItineraryId",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "是否 差旅 行程"
+    },
+    {
+      "field_name": "totalTimeLength",
+      "data_type": "int(40)",
+      "nullable": true,
+      "default": "0",
+      "comment": "出差总天数"
+    },
+    {
+      "field_name": "companyBody",
+      "data_type": "varchar(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": "签约主体"
+    },
+    {
+      "field_name": "reimbursedRemark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "报销操作备注"
+    },
+    {
+      "field_name": "reimbursedUserId",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "报销操作人id"
+    },
+    {
+      "field_name": "reimbursedTime",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "报销操作 时间"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "chance_id",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    },
+    {
+      "column": "contacts_id",
+      "references": {
+        "table": "zzvc_company_customer_contract",
+        "column": "id"
+      }
+    },
+    {
+      "column": "contracts_id",
+      "references": {
+        "table": "zzvc_contract",
+        "column": "id"
+      }
+    },
+    {
+      "column": "cost_id",
+      "references": {
+        "table": "zzvc_cost_detail_log",
+        "column": "id"
+      }
+    },
+    {
+      "column": "create_person_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "customer_id",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

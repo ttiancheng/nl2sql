@@ -1,0 +1,151 @@
+{
+  "table_name": "zzvc_bad_bill",
+  "table_comment": "坏账审批表,是销售合同坏账审批主表,用于保存合同、客户、坏账金额、审批状态和钉钉实例信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同编号"
+    },
+    {
+      "field_name": "project_name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "项目名称"
+    },
+    {
+      "field_name": "customer_name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户名称"
+    },
+    {
+      "field_name": "contract_money",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同金额"
+    },
+    {
+      "field_name": "bad_money",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "坏账金额"
+    },
+    {
+      "field_name": "is_open_bill",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "1",
+      "comment": "1未开票 2 已开票 3开票退还"
+    },
+    {
+      "field_name": "cost_money",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "商务统计成本金额"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "情况说明"
+    },
+    {
+      "field_name": "file",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "image",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "钉钉 审批id"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": "0",
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "最后修改时间"
+    },
+    {
+      "field_name": "user_id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "创建人id"
+    },
+    {
+      "field_name": "approvals_status",
+      "data_type": "tinyint(4)",
+      "nullable": true,
+      "default": "1",
+      "comment": "1 待提交 2审批中 3已拒绝 4已撤销 5已通过"
+    },
+    {
+      "field_name": "picture",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "dd_approvals_start_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "钉钉审批发起时间"
+    },
+    {
+      "field_name": "is_download_local",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "user_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

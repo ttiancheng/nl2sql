@@ -1,0 +1,88 @@
+{
+  "table_name": "zzvc_crm_log_esb2",
+  "table_comment": "ESB2 CRM 操作日志表,是ESB2 模块操作审计日志,用于记录模块、SQL、用户和属性 ID。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uid",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "type",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "msg",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "module",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "模块class"
+    },
+    {
+      "field_name": "module_name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "模块中文名字"
+    },
+    {
+      "field_name": "uname",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "sql",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "sql语句"
+    },
+    {
+      "field_name": "properties_id",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "属性id "
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "uid",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "table_name": "zzvc_software",
+  "table_comment": "软件产品表,定义软件/服务器产品选型资料，包含硬件、内存、硬盘、显卡、接口等。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "软件名称"
+    },
+    {
+      "field_name": "model",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "软件型号"
+    },
+    {
+      "field_name": "version",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "软件版本"
+    },
+    {
+      "field_name": "type",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "软件分类"
+    },
+    {
+      "field_name": "brand",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "品牌"
+    },
+    {
+      "field_name": "oper_system",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "操作系统配置"
+    },
+    {
+      "field_name": "hardware_server",
+      "data_type": "varchar(80)",
+      "nullable": true,
+      "default": null,
+      "comment": "硬件服务器配置"
+    },
+    {
+      "field_name": "software_description",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "软件描述"
+    },
+    {
+      "field_name": "unit",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "计量单位"
+    },
+    {
+      "field_name": "cpu",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "处理器"
+    },
+    {
+      "field_name": "memory",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "内存"
+    },
+    {
+      "field_name": "hard_disk",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "硬盘"
+    },
+    {
+      "field_name": "graphics_cards",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "显卡"
+    },
+    {
+      "field_name": "display",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "显示器"
+    },
+    {
+      "field_name": "interface",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "接口"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

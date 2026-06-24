@@ -1,0 +1,74 @@
+{
+  "table_name": "zzvc_business_chance_follow",
+  "table_comment": "销售日志表,包含销售机会跟进日志/行动记录,关联客户、商机和销售人员。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "date",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "日期"
+    },
+    {
+      "field_name": "stage",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "阶段"
+    },
+    {
+      "field_name": "saler",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "销售"
+    },
+    {
+      "field_name": "sign_time_money",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "预计时间和金额"
+    },
+    {
+      "field_name": "f_chanceId",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "销售机会id"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "备注"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "f_chanceId",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    }
+  ]
+}

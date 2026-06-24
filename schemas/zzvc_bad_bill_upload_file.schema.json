@@ -1,0 +1,74 @@
+{
+  "table_name": "zzvc_bad_bill_upload_file",
+  "table_comment": "坏账审批附件表,包含坏账审批关联的钉钉/本地上传附件元数据。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "bad_bill_id",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "坏账 id"
+    },
+    {
+      "field_name": "fileId",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileName",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileSize",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileType",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "spaceId",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "bad_bill_id",
+      "references": {
+        "table": "zzvc_bad_bill",
+        "column": "id"
+      }
+    }
+  ]
+}

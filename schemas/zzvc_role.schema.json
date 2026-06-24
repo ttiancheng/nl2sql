@@ -1,0 +1,88 @@
+{
+  "table_name": "zzvc_role",
+  "table_comment": "角色表,定义系统角色、菜单权限序列化数据和授权用户。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "role_name",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "menu_arr_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "remarks",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uid",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "isEsb2",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0不是1是"
+    },
+    {
+      "field_name": "auth_user_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "授权获取用户数据范围"
+    },
+    {
+      "field_name": "isHelp",
+      "data_type": "tinyint(4)",
+      "nullable": false,
+      "default": "1",
+      "comment": "是否tab帮助列：0-关闭，1-开启"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "uid",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

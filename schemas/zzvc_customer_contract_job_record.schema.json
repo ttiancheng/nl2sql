@@ -1,0 +1,60 @@
+{
+  "table_name": "zzvc_customer_contract_job_record",
+  "table_comment": "联系人职位记录表,定义客户联系人职位/任职历史记录。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "contract_token",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "唯一 用于判断是不是同一个人"
+    },
+    {
+      "field_name": "job",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "工作"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "customerId",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户id"
+    },
+    {
+      "field_name": "pid",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "customerId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

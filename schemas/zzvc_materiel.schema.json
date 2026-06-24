@@ -1,0 +1,228 @@
+{
+  "table_name": "zzvc_materiel",
+  "table_comment": "物料表,是物料主数据表单,用于保存编码、型号、品牌、采购、供应商和审批状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "物料编码"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(150)",
+      "nullable": false,
+      "default": null,
+      "comment": "物料名称"
+    },
+    {
+      "field_name": "model",
+      "data_type": "varchar(150)",
+      "nullable": false,
+      "default": null,
+      "comment": "厂家型号"
+    },
+    {
+      "field_name": "describe",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "物料描述"
+    },
+    {
+      "field_name": "brand",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "品牌"
+    },
+    {
+      "field_name": "factory",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "原厂"
+    },
+    {
+      "field_name": "min_ration",
+      "data_type": "int(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "最小启订量"
+    },
+    {
+      "field_name": "order_cycle",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": "0",
+      "comment": "订货周期"
+    },
+    {
+      "field_name": "materiel_data",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "物料资料"
+    },
+    {
+      "field_name": "materiel_data_source_name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "物料资料源文件名称"
+    },
+    {
+      "field_name": "materiel_data_old",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "materiel_data_source_name_old",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": null,
+      "comment": "物料可用状态： 0禁用、1待禁用、2可选 3 优选"
+    },
+    {
+      "field_name": "purchase_code",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购合同编号"
+    },
+    {
+      "field_name": "sale_project_name",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售项目名称"
+    },
+    {
+      "field_name": "number",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "数量"
+    },
+    {
+      "field_name": "price",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "supplier",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "供货厂家"
+    },
+    {
+      "field_name": "purchase_batch",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "采购批次"
+    },
+    {
+      "field_name": "arrival_time",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "到货时间"
+    },
+    {
+      "field_name": "maintenance_cycle",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "厂家维保周期"
+    },
+    {
+      "field_name": "apply_status",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0 无申请 1添加申请 2修改申请 3通过申请 4申请拒绝"
+    },
+    {
+      "field_name": "reason",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "createtime",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "发起申请创建时间"
+    },
+    {
+      "field_name": "create_person_id",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "发起申请人id"
+    },
+    {
+      "field_name": "apply_createtime",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "审批申请创建时间"
+    },
+    {
+      "field_name": "apply_person_id",
+      "data_type": "int(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "审批人id"
+    },
+    {
+      "field_name": "describe11",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "order_cycle_unit",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0工作日 1周"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "create_person_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

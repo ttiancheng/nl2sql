@@ -1,0 +1,277 @@
+{
+  "table_name": "zzvc_order",
+  "table_comment": "销售费用表,定义销售费用申请/订单协作费用记录，包含客户、合同、费用类型和审批状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "cost_id",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "费用id"
+    },
+    {
+      "field_name": "cost_id_prefix",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "费用id前缀"
+    },
+    {
+      "field_name": "cost_id_suffix",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "费用id后缀"
+    },
+    {
+      "field_name": "time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "发生日期"
+    },
+    {
+      "field_name": "before_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "发生日期 开始"
+    },
+    {
+      "field_name": "after_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "发生日期 结束"
+    },
+    {
+      "field_name": "customer_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户id"
+    },
+    {
+      "field_name": "customer_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户名称"
+    },
+    {
+      "field_name": "contacts_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "联系人id"
+    },
+    {
+      "field_name": "contacts_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "联系人姓名"
+    },
+    {
+      "field_name": "chance_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售机会id"
+    },
+    {
+      "field_name": "chance_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售机会主题"
+    },
+    {
+      "field_name": "contracts_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同id"
+    },
+    {
+      "field_name": "contracts_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同名称"
+    },
+    {
+      "field_name": "create_person_id",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "经手者id"
+    },
+    {
+      "field_name": "create_person_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "经手者姓名"
+    },
+    {
+      "field_name": "cost_type",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "费用类型id"
+    },
+    {
+      "field_name": "cost_type_name",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "费用类型 名称"
+    },
+    {
+      "field_name": "invoice_num",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "发票张数"
+    },
+    {
+      "field_name": "money",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "purpose",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "用途"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "备注"
+    },
+    {
+      "field_name": "reimbursement_status",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0未报销 1已报销"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "更新时间"
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "钉钉审批流 id"
+    },
+    {
+      "field_name": "before_place",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "出发地"
+    },
+    {
+      "field_name": "after_place",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "目的地"
+    },
+    {
+      "field_name": "reimbursedRemark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "报销操作备注"
+    },
+    {
+      "field_name": "reimbursedUserId",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "报销操作人id"
+    },
+    {
+      "field_name": "reimbursedTime",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "报销操作 时间"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "chance_id",
+      "references": {
+        "table": "zzvc_business_chance",
+        "column": "id"
+      }
+    },
+    {
+      "column": "contacts_id",
+      "references": {
+        "table": "zzvc_company_customer_contract",
+        "column": "id"
+      }
+    },
+    {
+      "column": "contracts_id",
+      "references": {
+        "table": "zzvc_contract",
+        "column": "id"
+      }
+    },
+    {
+      "column": "cost_id",
+      "references": {
+        "table": "zzvc_cost_detail_log",
+        "column": "id"
+      }
+    },
+    {
+      "column": "create_person_id",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "customer_id",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

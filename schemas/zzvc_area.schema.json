@@ -1,0 +1,67 @@
+{
+  "table_name": "zzvc_area",
+  "table_comment": "区域树表,包含了地区/区域层级数据,用于客户地区、组织区域等树形选择。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "companyId",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "所属公司id"
+    },
+    {
+      "field_name": "title",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "区域名称"
+    },
+    {
+      "field_name": "pid",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "父节点id"
+    },
+    {
+      "field_name": "spread",
+      "data_type": "varchar(10)",
+      "nullable": false,
+      "default": "true",
+      "comment": "展开"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "open",
+      "data_type": "varchar(10)",
+      "nullable": false,
+      "default": "true",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "companyId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

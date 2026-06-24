@@ -1,0 +1,102 @@
+{
+  "table_name": "zzvc_device_basic_bom",
+  "table_comment": "产品选型 BOM 表,定义产品选型设备的 BOM/配件明细。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "bom_name",
+      "data_type": "varchar(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "设备名称"
+    },
+    {
+      "field_name": "bom_model",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "设备型号"
+    },
+    {
+      "field_name": "bom_brand",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "品牌信息"
+    },
+    {
+      "field_name": "bom_factory",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "生产厂家"
+    },
+    {
+      "field_name": "bom_config_num",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "配置数量"
+    },
+    {
+      "field_name": "bom_packing_num",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 包装数量"
+    },
+    {
+      "field_name": "bom_packing_weight",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 包装重量"
+    },
+    {
+      "field_name": "bom_specification_manual",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 产品规格书"
+    },
+    {
+      "field_name": "bom_operation_manual",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 操作指导书"
+    },
+    {
+      "field_name": "bom_remark",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "BOM 备注"
+    },
+    {
+      "field_name": "cId",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "设备表对应id"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "cId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

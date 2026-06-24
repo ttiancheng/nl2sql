@@ -1,0 +1,214 @@
+{
+  "table_name": "zzvc_dd_open_bill",
+  "table_comment": "钉钉开票申请表,定义钉钉开票申请单及附件基础信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户名称"
+    },
+    {
+      "field_name": "taxNumber",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户税号"
+    },
+    {
+      "field_name": "addressTel",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "地址电话"
+    },
+    {
+      "field_name": "accountBank",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "银行账号"
+    },
+    {
+      "field_name": "productName",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "商品名称"
+    },
+    {
+      "field_name": "model",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "规格型号"
+    },
+    {
+      "field_name": "metering",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "计量单位"
+    },
+    {
+      "field_name": "size",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "数量"
+    },
+    {
+      "field_name": "unitPrice",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "单价"
+    },
+    {
+      "field_name": "price",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "金额"
+    },
+    {
+      "field_name": "taxRate",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "税率"
+    },
+    {
+      "field_name": "typeCode",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "分类编码"
+    },
+    {
+      "field_name": "collectionDate",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "预计收款日期"
+    },
+    {
+      "field_name": "remark",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "备注"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(20)",
+      "nullable": false,
+      "default": null,
+      "comment": "合同编号"
+    },
+    {
+      "field_name": "cId",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uId",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "上传人"
+    },
+    {
+      "field_name": "token",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "ticketNumber",
+      "data_type": "int(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "票据"
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "varchar(120)",
+      "nullable": true,
+      "default": null,
+      "comment": "丁丁 申请id"
+    },
+    {
+      "field_name": "applyTime",
+      "data_type": "int(40)",
+      "nullable": true,
+      "default": null,
+      "comment": "发布申请时间"
+    },
+    {
+      "field_name": "fileId",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "spaceId",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileName",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileSize",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "fileType",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "cId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "uId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

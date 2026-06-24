@@ -1,0 +1,53 @@
+{
+  "table_name": "zzvc_sales_contract_search_condition",
+  "table_comment": "销售合同搜索条件表,定义用户保存的销售合同高级搜索条件。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "uid",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": "用户ID"
+    },
+    {
+      "field_name": "sales_contract_search",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "合同变更负责人 搜索条件"
+    },
+    {
+      "field_name": "start_time",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "end_time",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "uid",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

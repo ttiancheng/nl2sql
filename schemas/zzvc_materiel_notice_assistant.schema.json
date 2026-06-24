@@ -1,0 +1,58 @@
+{
+  "table_name": "zzvc_materiel_notice_assistant",
+  "table_comment": "物料协助通知表,定义物料协助人通知和查看状态。",
+  "fields": [
+    {
+      "field_name": "materiel_id",
+      "data_type": "int(11)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "is_pass",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": null,
+      "comment": "0 拒绝 1通过"
+    },
+    {
+      "field_name": "receiver_id",
+      "data_type": "varchar(255)",
+      "nullable": false,
+      "default": null,
+      "comment": "接收人id"
+    },
+    {
+      "field_name": "is_viewed",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0 未查阅 1已查阅"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "sign",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "1",
+      "comment": "0通知 1物料通知2 物料添加 3 物料修改"
+    }
+  ],
+  "primary_key": [],
+  "foreign_keys": [
+    {
+      "column": "materiel_id",
+      "references": {
+        "table": "zzvc_materiel",
+        "column": "id"
+      }
+    }
+  ]
+}

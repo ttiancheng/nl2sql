@@ -1,0 +1,11 @@
+{
+    "_comment": "Copy this file to db_config.json and update with your MySQL settings. All values can be overridden by environment variables (DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME, DB_TIMEOUT, DB_CHARSET, ROW_LIMIT).",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "root",
+    "password": "root",
+    "database": "esb2",
+    "connect_timeout": 5,
+    "charset": "utf8mb4",
+    "row_limit": 200
+}

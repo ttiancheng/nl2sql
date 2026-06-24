@@ -1,0 +1,137 @@
+{
+  "table_name": "zzvc_demand_template",
+  "table_comment": "项目需求模板表,定义项目需求/会议室/服务器/部署等需求模板信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "project_name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "项目名称"
+    },
+    {
+      "field_name": "date_time",
+      "data_type": "varchar(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "日期时间"
+    },
+    {
+      "field_name": "room_size",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "会议室数量"
+    },
+    {
+      "field_name": "third_server",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "1 yes 0 no"
+    },
+    {
+      "field_name": "server_type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "选择服务器类型"
+    },
+    {
+      "field_name": "deployment_type",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "部署方式 local本地部署 cloud云部署"
+    },
+    {
+      "field_name": "server_model",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "服务器模式 icomi iComi服务器 3rd第三方服务器(独立客户端)"
+    },
+    {
+      "field_name": "ad_synchronization",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": "AD域同步 1 yes 0 no"
+    },
+    {
+      "field_name": "door_forbid",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": "门禁联动1 yes 0 no"
+    },
+    {
+      "field_name": "center_control",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": "中控对接 1yes 0 no"
+    },
+    {
+      "field_name": "sms_notice",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": "短信通知 1yes 0 no"
+    },
+    {
+      "field_name": "sms_server",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "短信服务器"
+    },
+    {
+      "field_name": "detect",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": null,
+      "comment": "占用探测(有线) 1yes 0 no"
+    },
+    {
+      "field_name": "uId",
+      "data_type": "int(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "提交人"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "更新时间"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "uId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

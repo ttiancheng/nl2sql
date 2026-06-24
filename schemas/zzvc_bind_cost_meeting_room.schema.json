@@ -1,0 +1,46 @@
+{
+  "table_name": "zzvc_bind_cost_meeting_room",
+  "table_comment": "费用明细会议室绑定表,定义费用明细与会议室/成本空间的绑定关系。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "meetingRoomId",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "会议室id"
+    },
+    {
+      "field_name": "costDetailId",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "成本详情id"
+    },
+    {
+      "field_name": "number",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "meetingRoomId",
+      "references": {
+        "table": "zzvc_meeting_room",
+        "column": "id"
+      }
+    }
+  ]
+}

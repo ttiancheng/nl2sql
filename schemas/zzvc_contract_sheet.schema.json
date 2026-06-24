@@ -1,0 +1,87 @@
+{
+  "table_name": "zzvc_contract_sheet",
+  "table_comment": "合同回款/收款计划表,定义合同阶段性收款、验收或回款计划明细。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "print",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "选择打印"
+    },
+    {
+      "field_name": "billDate",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "单据日期"
+    },
+    {
+      "field_name": "customer",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户"
+    },
+    {
+      "field_name": "money",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "金额"
+    },
+    {
+      "field_name": "department",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "部门"
+    },
+    {
+      "field_name": "salesman",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "业务员"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同号"
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同名称"
+    },
+    {
+      "field_name": "acceptance_date",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "companyBody",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "签约主体"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

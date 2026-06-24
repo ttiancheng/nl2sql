@@ -1,0 +1,45 @@
+{
+  "table_name": "zzvc_customer_area_config",
+  "table_comment": "客户区域配置表,定义客户公海/区域分组授权配置,用于保存用户和角色范围。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户信息区域名称"
+    },
+    {
+      "field_name": "uids",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "授权用户id集合 逗号隔开"
+    },
+    {
+      "field_name": "type",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0查看1操作"
+    },
+    {
+      "field_name": "role_ids",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "角色ids"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

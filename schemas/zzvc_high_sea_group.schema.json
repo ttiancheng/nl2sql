@@ -1,0 +1,52 @@
+{
+  "table_name": "zzvc_high_sea_group",
+  "table_comment": "客户公海组表,定义客户公海/高海分组及授权配置。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "name",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "分组组名"
+    },
+    {
+      "field_name": "management_ids",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "管理者id"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "更新时间"
+    },
+    {
+      "field_name": "status",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "1",
+      "comment": "0不显示 1显示"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

@@ -1,0 +1,101 @@
+{
+  "table_name": "zzvc_dictionary",
+  "table_comment": "字典表,定义部门、角色选项、业务选项等通用字典数据。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "key",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "value",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "category",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "int(10)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "update_time",
+      "data_type": "int(10)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "remarks",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "备注"
+    },
+    {
+      "field_name": "operator",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "操作人ID"
+    },
+    {
+      "field_name": "isSalerDepartment",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "0非销售业务部门 1销售业务部门"
+    },
+    {
+      "field_name": "department_color",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "部门颜色特征值"
+    },
+    {
+      "field_name": "exam_type",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "考核类型：0不考核 1签单考核 2毛利考核"
+    },
+    {
+      "field_name": "average_odds",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "showDept",
+      "data_type": "tinyint(4)",
+      "nullable": true,
+      "default": "1",
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

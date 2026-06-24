@@ -1,0 +1,249 @@
+{
+  "table_name": "zzvc_business_chance",
+  "table_comment": "销售机会表,是销售商机主表,用于保存客户、主题、阶段、金额、负责人和审批状态。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "theme",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "项目主题"
+    },
+    {
+      "field_name": "customer",
+      "data_type": "varchar(30)",
+      "nullable": false,
+      "default": null,
+      "comment": "客户"
+    },
+    {
+      "field_name": "contacts",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "客户联系人"
+    },
+    {
+      "field_name": "saler_leader",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "销售负责人"
+    },
+    {
+      "field_name": "technology_leader",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "技术负责人"
+    },
+    {
+      "field_name": "type",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "商机类型"
+    },
+    {
+      "field_name": "source",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "商机来源"
+    },
+    {
+      "field_name": "time",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "发现时间"
+    },
+    {
+      "field_name": "status",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "商机状态"
+    },
+    {
+      "field_name": "sign_time",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "预计签单时间"
+    },
+    {
+      "field_name": "sign_money",
+      "data_type": "double",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "possibility",
+      "data_type": "varchar(10)",
+      "nullable": false,
+      "default": null,
+      "comment": "项目可能性"
+    },
+    {
+      "field_name": "stage",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": "商机阶段"
+    },
+    {
+      "field_name": "stage_remark",
+      "data_type": "text",
+      "nullable": false,
+      "default": null,
+      "comment": "阶段备注"
+    },
+    {
+      "field_name": "uId",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": null,
+      "comment": "创建人id"
+    },
+    {
+      "field_name": "create_time",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "创建时间"
+    },
+    {
+      "field_name": "dd_approval_status",
+      "data_type": "varchar(10)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "process_instance_id",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "丁丁 申请id"
+    },
+    {
+      "field_name": "cId",
+      "data_type": "int(10)",
+      "nullable": false,
+      "default": "0",
+      "comment": "审批人"
+    },
+    {
+      "field_name": "demand",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "客户需求"
+    },
+    {
+      "field_name": "project_id",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "项目id"
+    },
+    {
+      "field_name": "last_update_time",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "最后更新时间"
+    },
+    {
+      "field_name": "id_str",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "id 格式 IDYYMMXX  ID210601"
+    },
+    {
+      "field_name": "final_customer",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "最终客户"
+    },
+    {
+      "field_name": "is_c135_required",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": "类型为：AV集成项目集成项目， 0非必填 1必填"
+    },
+    {
+      "field_name": "is_c135_remind",
+      "data_type": "tinyint(1)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "possibility_value",
+      "data_type": "int(50)",
+      "nullable": true,
+      "default": "0",
+      "comment": null
+    },
+    {
+      "field_name": "stage_index",
+      "data_type": "int(10)",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "follow",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "决策因素"
+    },
+    {
+      "field_name": "shared_userId",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": null
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "cId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "shared_userId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    },
+    {
+      "column": "uId",
+      "references": {
+        "table": "zzvc_user",
+        "column": "id"
+      }
+    }
+  ]
+}

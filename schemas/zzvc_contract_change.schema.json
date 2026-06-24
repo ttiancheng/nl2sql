@@ -1,0 +1,108 @@
+{
+  "table_name": "zzvc_contract_change",
+  "table_comment": "合同变更记录表,定义合同变更/改签/人员变更相关记录。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(20)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同编码"
+    },
+    {
+      "field_name": "effective_person",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更生效人"
+    },
+    {
+      "field_name": "single_person",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更制单人"
+    },
+    {
+      "field_name": "frequency",
+      "data_type": "int(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更次数"
+    },
+    {
+      "field_name": "reason",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更原因码"
+    },
+    {
+      "field_name": "change_date",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更单日期"
+    },
+    {
+      "field_name": "effective_date",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更生效日期"
+    },
+    {
+      "field_name": "change_content",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "变更内容"
+    },
+    {
+      "field_name": "date_signing",
+      "data_type": "int(11)",
+      "nullable": true,
+      "default": null,
+      "comment": "合同签订日期"
+    },
+    {
+      "field_name": "department",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "部门"
+    },
+    {
+      "field_name": "salesman",
+      "data_type": "varchar(20)",
+      "nullable": true,
+      "default": null,
+      "comment": "业务员"
+    },
+    {
+      "field_name": "choice",
+      "data_type": "varchar(30)",
+      "nullable": true,
+      "default": null,
+      "comment": "选择"
+    },
+    {
+      "field_name": "companyBody",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "签约主体"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}

@@ -1,0 +1,102 @@
+{
+  "table_name": "zzvc_tax_gys",
+  "table_comment": "供应商开票税务信息表,定义供应商税务、开户行、税号、许可证和开票文件信息。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "sw_name",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "税务_公司名称"
+    },
+    {
+      "field_name": "open_bank",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "开户银行"
+    },
+    {
+      "field_name": "address_bank",
+      "data_type": "varchar(150)",
+      "nullable": true,
+      "default": null,
+      "comment": "银行地址"
+    },
+    {
+      "field_name": "account_bank",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "银行账号"
+    },
+    {
+      "field_name": "company_tax_number",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "公司税号"
+    },
+    {
+      "field_name": "associate_bank_number",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "银行联行号"
+    },
+    {
+      "field_name": "final_money_type",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "结算币种"
+    },
+    {
+      "field_name": "invoice_file",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "公司开票信息文件"
+    },
+    {
+      "field_name": "open_licence_photo",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "开户许可证图片"
+    },
+    {
+      "field_name": "companyId",
+      "data_type": "int(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "所属客户公司id"
+    },
+    {
+      "field_name": "invoice_file_names",
+      "data_type": "text",
+      "nullable": true,
+      "default": null,
+      "comment": "公司开票信息文件 名称"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": [
+    {
+      "column": "companyId",
+      "references": {
+        "table": "zzvc_company_customer",
+        "column": "id"
+      }
+    }
+  ]
+}

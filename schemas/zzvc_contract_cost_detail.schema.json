@@ -1,0 +1,73 @@
+{
+  "table_name": "zzvc_contract_cost_detail",
+  "table_comment": "合同成本明细表,定义合同商品/成本明细,包含货号、数量、单价和成本会议室分配标记。",
+  "fields": [
+    {
+      "field_name": "id",
+      "data_type": "int(30)",
+      "nullable": false,
+      "default": null,
+      "comment": null
+    },
+    {
+      "field_name": "goodsName",
+      "data_type": "varchar(50)",
+      "nullable": false,
+      "default": null,
+      "comment": "存货名称"
+    },
+    {
+      "field_name": "specification",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "规格"
+    },
+    {
+      "field_name": "unit",
+      "data_type": "varchar(200)",
+      "nullable": false,
+      "default": null,
+      "comment": "单位"
+    },
+    {
+      "field_name": "goodsCode",
+      "data_type": "varchar(100)",
+      "nullable": true,
+      "default": null,
+      "comment": "存货代码"
+    },
+    {
+      "field_name": "goodsNumber",
+      "data_type": "varchar(200)",
+      "nullable": true,
+      "default": null,
+      "comment": "存货编码"
+    },
+    {
+      "field_name": "quantity",
+      "data_type": "varchar(50)",
+      "nullable": true,
+      "default": null,
+      "comment": "发出数量"
+    },
+    {
+      "field_name": "code",
+      "data_type": "varchar(100)",
+      "nullable": false,
+      "default": null,
+      "comment": "项目编码(唯一标识)"
+    },
+    {
+      "field_name": "isAllotMeerintRoom",
+      "data_type": "tinyint(1)",
+      "nullable": false,
+      "default": "0",
+      "comment": "是否已经绑定  0没有  1有"
+    }
+  ],
+  "primary_key": [
+    "id"
+  ],
+  "foreign_keys": []
+}
